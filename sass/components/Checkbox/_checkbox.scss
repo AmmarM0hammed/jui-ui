@@ -1,0 +1,24 @@
+@use "../../base/base" as *;
+@import "./base-checkbox";
+@import "../../helpers/disabled";
+@import "./checkbox-sizes";
+.checkbox{
+    @include base-checkbox();
+
+    &.checkbox-disabled *{
+           @include disabled();
+    }
+}
+
+@each $name,$color in $array-colors{
+    .checkbox-#{$name}{
+        @include base-checkbox($color);
+    }
+}
+@include checkbox-sizes();
+
+.checkbox-circal input[type="checkbox"]{
+    border-radius: 100%;
+}
+
+

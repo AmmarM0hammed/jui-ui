@@ -1,0 +1,42 @@
+
+
+@mixin input-colors(){
+    .input-flat{
+        background-color: rgba($color-default,0.2) !important;
+        color: $color-default !important;
+        &::placeholder{
+            color: rgba($color-default , .5) !important;
+        }
+         .input-icon {
+            background-color: red;
+          }
+    } 
+
+    .input-group:has(.input-icon):has(.input-flat){
+        .input-icon{
+            background-color: #D6D6D6;
+        }
+    }
+    @each $name , $color in $array-colors{
+        .input-flat-#{$name}{
+            background-color: rgba($color,0.2) !important;
+            color: $color !important;
+            &::placeholder{
+                color: rgba($color , 1) !important;
+            }
+        }
+        .input-group:has(.input-icon):has(.input-flat-#{$name}){
+            .input-icon{
+                background-color: rgba($color,0.2);
+                padding: 11px;
+                color: $color;
+            }
+            input:focus  + .input-icon{
+                background-color:$color;
+                color: white;
+            }
+        }
+        
+    }
+    
+}

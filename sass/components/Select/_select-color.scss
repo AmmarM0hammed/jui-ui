@@ -1,0 +1,26 @@
+
+
+@mixin select-color(){
+    .select-flat{
+        background-color: rgba($color-default,0.2) !important;
+        color: $color-default !important;
+        &::placeholder{
+            color: rgba($color-default , .5) !important;
+        }
+         
+    } 
+
+
+    @each $name , $color in $array-colors{
+        .select-flat-#{$name}{
+            background-color: rgba($color,0.2) !important;
+            color: $color !important;
+            &::placeholder{
+                color: rgba($color , 1) !important;
+            }
+        }
+       
+        
+    }
+    
+}

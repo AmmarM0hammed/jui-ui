@@ -1,0 +1,18 @@
+
+
+@mixin avatar-group(){
+    .avatar-group{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .avatar{
+            position: relative;
+            margin-left: -20px;
+            transition: $transition-time;
+            &:hover{
+                transform: translate(-10px,0%);
+            }
+        }
+    }
+}

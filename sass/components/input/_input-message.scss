@@ -1,0 +1,44 @@
+
+$message-postion:("top-right","top-left","bottom-right","bottom-left");
+@mixin input-message(){
+    .message{
+        position: absolute;
+        font-size: 12px;
+        color: $color-input;
+        opacity: .8;
+        padding-inline:5px;
+        // background-color: red
+    }
+
+    @each $name in $message-postion{
+        .message-#{$name}{
+            @extend .message;
+            // color: $color;
+            // font-size: 12px;
+            @if $name == "top-right"{
+                right: 0px;
+                top: 0;
+            }
+            @else if $name == "top-left"{
+                left: 0;
+                top: 0;
+            }
+            @else if $name == "bottom-left"{
+                left: 0;
+                bottom: 0;
+            }
+            @else if $name == "bottom-right"{
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+    @each $name,$color in $array-colors{
+        .message-#{$name}{
+            @extend .message;
+            color: $color;
+            font-size: 12px;
+        }
+    }
+}

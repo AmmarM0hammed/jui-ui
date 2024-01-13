@@ -1,0 +1,14 @@
+
+@import "../../helpers/form-input";
+
+@mixin  base-file(){
+    @include base-from("file");
+    .file{
+        appearance: none;
+        cursor: pointer;
+        position: relative;
+    }
+    .file::-webkit-file-upload-button{
+       display: none;
+    }
+}

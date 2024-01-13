@@ -1,0 +1,45 @@
+
+
+@mixin base-from($class){
+    .#{$class}{
+        background-color: $color-background-input;
+        color: $color-input;
+        border: none;
+        border-radius: $border-radius - 2px;
+        width: 200px;
+        height: 35px;
+        padding-inline: 15px;
+        font-size: 14px;
+        transition: $transition-time;
+        border-bottom: 2px solid transparent;
+        &::placeholder{
+            color: $color-placeholder-input;
+            transition: $transition-time;
+        }
+
+        &.#{$class}-circal{
+            border-radius: 500px
+        }
+       &.#{$class}-disabled{
+            @include disabled();
+        }
+        &.#{$class}-animation{
+            &:hover{
+                transform: translateY($base-transform);
+                box-shadow: input-shadow();
+                
+            }
+            &:focus{
+                transform: translateY($base-transform);
+                box-shadow: input-shadow();
+            }
+        }
+
+       &.#{$class}-block{
+        width: 100%;
+       }
+      
+    }
+}
+
+

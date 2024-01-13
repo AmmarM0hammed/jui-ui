@@ -1,0 +1,42 @@
+
+@mixin select-border(){
+    .select{
+    &.select-border{
+        border-bottom:2px solid $color-default ;
+    }
+
+    @each $name,$color in $array-colors{
+        &.select-border-#{$name}{
+            border-bottom:2px solid $color ;
+        }    
+    }
+
+    &:focus{
+        &.select-border-focus{
+            border-bottom:2px solid $color-default ;
+        }
+        &::placeholder{
+            transition: $transition-time;
+            opacity: 0;
+            padding-left: 8px;
+        }
+        outline: none;
+        @each $name,$color in $array-colors{
+            &.select-border-#{$name}-focus{
+                border-bottom:2px solid $color ;
+            }    
+        }
+    }   
+    &:hover{
+        &.select-border-hover{
+            border-bottom:2px solid $color-default ;
+        }
+    @each $name,$color in $array-colors{
+            &.select-border-#{$name}-hover{
+                border-bottom:2px solid $color ;
+            }    
+        }
+    }
+}
+}
+

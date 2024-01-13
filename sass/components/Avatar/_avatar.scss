@@ -1,0 +1,25 @@
+@use "../../base/base" as *;
+@import "./base-avatar";
+@import "./avatar-colors";
+@import "./avatar-group";
+@import "./avatar-size";
+@import "./avatar-shadow";
+@import "./avatar-ring";
+@import "./avatar-text";
+
+
+.avatar{
+    @include base-avatar();
+}
+
+@include avatar-colors();
+@include avatar-group();
+@include avatar-sizes();
+@include avatar-shadow();
+@include avatar-ring();
+@include avatar-text();
+
+
+
+
+

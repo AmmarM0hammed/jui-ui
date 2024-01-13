@@ -1,0 +1,56 @@
+
+
+
+@mixin avatar-text(){
+
+    .avatar-text{
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background-color: $color-default;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .avatar-text *{
+        position: relative;
+        padding: 15px 10px;
+        text-align: center;
+        border-radius: $border-radius-avatar;
+        color: white;
+        font-size: 15px;
+        font-weight: 400;
+        user-select: none;
+    }
+    .avatar-text.avatar-circal {
+        border-radius: 200px;
+    }
+    @each $name,$color in $array-colors{
+        .avatar-text-#{$name}{
+            position: relative;
+            width: 50px;
+            height: 50px;
+            background-color: $color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+        }
+        .avatar-text-#{$name} *{
+            position: relative;
+            padding: 15px 10px;
+            text-align: center;
+            border-radius: $border-radius-avatar;
+            color: white;
+            font-size: 15px;
+            font-weight: 400;
+            user-select: none;
+        }
+        .avatar-text-#{$name}.avatar-circal {
+            border-radius: 200px;
+        }
+    }
+
+   
+}

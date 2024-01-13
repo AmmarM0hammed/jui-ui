@@ -1,0 +1,18 @@
+
+$button-sizes:(
+    "xs":5px 11px,
+    "sm":10px 20px,
+    "md":$padding-button, //13px 22px
+    "lg":17px 28px,
+    "xl":20px 28px,
+    "2xl":20px 35px,
+);
+
+
+@mixin button-size(){
+    @each $name,$size in $button-sizes{
+        .btn-#{$name}{
+            padding: $size;
+        }
+    }
+}

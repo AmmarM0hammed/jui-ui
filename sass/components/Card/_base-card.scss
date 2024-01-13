@@ -1,0 +1,79 @@
+
+
+@mixin base-card(){
+    .card{
+        cursor: pointer;
+        overflow: hidden;
+        &:hover{
+            transform: translateY(4px);
+            box-shadow: none;
+            .card-image img{
+                transform: scale(115%);
+            }
+        }
+        width: fit-content;
+        max-width: 20em;
+        background-color: white;
+        border-radius: $border-radius;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        // padding-inline: 10px;
+        // padding-block: 10px;
+        box-shadow: default-shadow();
+        transition: $transition-time;
+        box-sizing: border-box;
+        
+        .card-image{
+            position: relative;
+            overflow: hidden;
+            // max-width: 20em;
+            border-radius: $border-radius;
+            max-height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-clip-margin: 5px;
+
+            img{
+                width: 100%;
+                border-radius: $border-radius;
+                transition: $transition-time;
+                :hover{
+                    transform: scale(96%);
+                }
+            }
+            .card-action{
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                display: flex; 
+                flex-direction: row;
+                gap: 10px;
+                .btn{
+                    padding: 12px 13px;
+                    font-size: 12px;
+                }
+            }
+        }
+        .card-details{
+            padding: 14px;
+            .card-title{
+                font-size: 16px;
+                font-weight: 700;
+                padding-block: 4px;
+                color: $header-text-color;
+            }
+            .card-text{
+                font-size:13px;
+                padding-block: 4px;
+                opacity: .7;
+            }
+            .card-action{
+                padding-top: 20px;
+                display: flex;
+                gap: 10px;
+            }
+        }
+    }
+}

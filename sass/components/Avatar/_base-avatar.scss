@@ -1,0 +1,19 @@
+
+@mixin base-avatar($color:$color-default){
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    border-radius: $border-radius-avatar;
+    // background-color: red;   
+    img{
+        max-width: 50px;
+        max-height: 50px;
+        border-radius: $border-radius-avatar;
+        display: flex;
+        transition: $transition-time;
+      
+    }
+    &.avatar-circal img{
+        border-radius: 100%;
+    }
+}

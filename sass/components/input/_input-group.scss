@@ -1,0 +1,139 @@
+// @import './input';
+
+$input-group-message:"bottom-left","bottom-right";
+
+$icon-postion:"left","right";
+
+
+@mixin input-group(){
+    .input-group{
+        position: relative;
+        // background-color: red;
+        width: fit-content;
+        height: fit-content;
+        padding-block: 16px;
+        transition: $transition-time;
+
+        &:not(.input-icon-left){
+            .input-icon{
+                right: 0;
+            }
+        }
+        &.input-disabled *{
+            @include disabled();
+        }
+        &:has(.input-icon.input-icon-animation){
+            input:focus  + .input-icon{
+                box-shadow: input-shadow();
+                transform: translate(4px,-5px);
+            }
+        }
+        &:has(input.input-animation){
+        &:hover{
+            transform: translateY($base-transform - 2px);
+        }
+        input:hover{
+            transform: translateY(0px)
+        }
+        input:focus{
+            transform: translateY($base-transform);
+        }
+    }
+        .input-icon{
+            transition: $transition-time;
+            position: absolute;
+            padding: 10px;
+            font-size: 16px;
+            color: $color-default;
+            background-color: $color-background-input;
+            border-radius: 12px;
+            // top: 50%;
+            // transform: translateY(-50%);
+           
+        }
+        @each $postion-icon in $icon-postion{
+            &.input-icon-#{$postion-icon}{
+                @if $postion-icon == "left"{
+                    .input-icon{left: 0;}
+                    &:has(.input-icon.input-icon-animation){
+                        input:focus  + .input-icon{
+                            box-shadow: input-shadow();
+                            transform: translate(-4px,-5px);
+                        }
+                    }
+                    input{
+                        padding-left: 40px;
+                        width: calc(200px - 21px);
+                    }
+
+                 }@else{
+                    .input-icon{right: 0;}
+                    &:has(.input-icon.input-icon-animation){
+                    input:focus  + .input-icon{
+                        box-shadow: input-shadow();
+                        transform: translate(4px,-5px);
+                    }
+                }
+                }
+            }
+        }
+    }
+
+    // position: relative;
+    // width: fit-content;
+    // height: fit-content;
+    // background-color: red;
+    // border-radius: $border-radius;
+    // transition: $transition-time;
+    // &:has(input.input-animation){
+    //     &:hover{
+    //         transform: translateY($base-transform - 2px);
+    //     }
+    //     input:hover{
+    //         transform: translateY(0px)
+    //     }
+    //     input:focus{
+    //         transform: translateY($base-transform);
+    //     }
+    // }
+    // input{
+    //     @include base-input();
+    //     @if $postion =='left'{
+    //         width: calc(200px - 20px);
+    //         padding-left: 37px;
+    //     }
+    //     border-radius: 12px;
+
+
+    //     &:focus  + .input-icon{
+    //         box-shadow: input-shadow();
+    //         @if $postion =='left'{
+    //             transform: translate(-3px,-4px);
+    //         }
+    //         @else{
+    //             transform: translate(4px,-4px);
+    //         }
+    //     }
+        
+        
+    // }
+   
+    // .input-icon{
+    //     transition: $transition-time;
+    //     position: absolute;
+    //     padding: 10px;
+    //     font-size: 16px;
+    //     color: $color;
+    //     background-color: $color-background-input;
+    //     border-radius: 12px;
+    //     top: 0;
+    //     @if $postion == "left"{
+    //         left: 0;
+    //     }@else{
+    //         right: 0;
+    //     }
+    // }
+   
+
+
+}

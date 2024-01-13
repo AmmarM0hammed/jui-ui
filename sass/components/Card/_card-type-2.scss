@@ -1,0 +1,43 @@
+@mixin card-type-2(){
+    .card-type-2{
+        position: relative;
+
+        .card-image{
+            .card-action{
+                top: 15px;
+                right: 15px;
+                bottom: auto;
+                left:auto;
+            }
+        }
+        &:hover{
+            transform: translateY(0) scale(98%);
+            .card-details{
+                opacity: 1;
+                bottom: 0px;
+               
+            }    
+            .card-image{
+                img{
+                    filter: blur(2px) brightness(90%);
+                }
+            }
+        }
+        .card-details{
+            .card-title{
+                color: white;
+            }
+            .card-text{
+                opacity: 1;
+            }
+            position: absolute;
+            transition: $transition-time;
+            opacity: 1;
+            // background: rgb(2,0,36);
+            color: white;
+            background: linear-gradient(180deg,transparent,rgba(0,0,0,.3));
+             border-radius: $border-radius;
+            bottom: -200px;
+        }
+    }
+}

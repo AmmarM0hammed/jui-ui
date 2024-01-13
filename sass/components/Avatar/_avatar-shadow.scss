@@ -1,0 +1,27 @@
+
+
+@mixin avatar-shadow(){
+
+    .avatar-shadow{
+        transition: $transition-time;
+       
+         box-shadow: default-shadow();
+        &:hover{
+            transform: translateY($base-transform);
+            box-shadow: default-shadow-hover();
+        }
+    }
+    
+    @each $name,$color in $array-colors{
+        .avatar-shadow-#{$name}{
+            img{
+                box-shadow: avatar-shadow($color);
+            }
+            &:hover img{
+                transform: translateY($base-transform);
+                box-shadow: avatar-shadow-hover($color);
+            }
+        }
+    }
+    
+}

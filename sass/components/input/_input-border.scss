@@ -1,0 +1,120 @@
+
+@mixin input-border(){
+    input{
+    &.input-border{
+        border-bottom:2px solid $color-default ;
+    }
+
+    @each $name,$color in $array-colors{
+        &.input-border-#{$name}{
+            border-bottom:2px solid $color ;
+        }    
+    }
+
+    &:focus{
+        &.input-border-focus{
+            border-bottom:2px solid $color-default ;
+        }
+        &::placeholder{
+            transition: $transition-time;
+            opacity: 0;
+            padding-left: 8px;
+        }
+        outline: none;
+        @each $name,$color in $array-colors{
+            &.input-border-#{$name}-focus{
+                border-bottom:2px solid $color ;
+            }    
+        }
+    }   
+    &:hover{
+        &.input-border-hover{
+            border-bottom:2px solid $color-default ;
+        }
+    @each $name,$color in $array-colors{
+            &.input-border-#{$name}-hover{
+                border-bottom:2px solid $color ;
+            }    
+        }
+    }
+}
+}
+
+
+@mixin input-ring{
+    .input-ring{
+        background-color: white !important;
+        border: 2px solid rgba($color-input,.5) !important;
+        &::placeholder{
+            color: $color-placeholder-input;
+        }
+        &:hover , &:focus{
+            border-color: rgba($color-input,1) !important;
+        }
+    }
+    
+
+    @each $name,$color in $array-colors{
+        .input-ring-#{$name}{
+            background-color: white !important;
+            border: 2px solid rgba($color,1) !important;
+            &::placeholder{
+                color: $color-placeholder-input;
+            }
+           
+        }
+        .input-ring-#{$name}-hover{
+            background-color: white !important;
+            border: 2px solid rgba($color-input,.5) !important;
+            &::placeholder{
+                color: $color-placeholder-input;
+            }
+            &:hover{
+                border-color: rgba($color,1) !important;
+            }
+        }
+        .input-ring-#{$name}-focus{
+            background-color: white !important;
+            border: 2px solid rgba($color-input,.5) !important;
+            &::placeholder{
+                color:$color-placeholder-input;
+            }
+             &:focus{
+                border-color: rgba($color,1) !important;
+             }
+        }
+    }
+}
+
+@mixin input-border-bottom(){
+    .input-border-bottom{
+        position: relative !important;
+        background-color: transparent !important;
+        border: none !important;
+        border-bottom: 3px solid rgba($color-input,.5) !important;
+        border-radius: 0 !important;
+        
+        &:focus{
+            border-bottom-color:rgba($color-input,1) !important;
+        }
+        
+    }
+
+    @each $name,$color in $array-colors{
+        input{
+            // position: relative !important;
+        &.input-border-bottom-#{$name}{
+            // position: relative !important;
+            background-color: transparent !important;
+            border: none !important;
+            border-bottom: 3px solid rgba($color,1) !important;
+            border-radius: 0 !important;
+            display: block;
+     
+            &:focus{
+                border-bottom-color:rgba($color,1) !important;
+            }
+        }
+     }
+    }
+}

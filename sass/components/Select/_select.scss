@@ -1,0 +1,12 @@
+@use "../../base/base" as *;
+@import "./base-select";
+@import "./select-color";
+@import "./select-border";
+@import "./select-sizes";
+
+@import "../../helpers/disabled";
+
+@include base-select();
+@include select-color();
+@include select-border();
+@include select-sizes();

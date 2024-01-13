@@ -1,0 +1,22 @@
+
+
+
+@mixin table-color(){
+
+    @each $name,$color in $array-colors{
+        .table-#{$name}{
+            thead tr {
+                background-color: $color !important; 
+              
+            }
+             tbody tr.active {
+               
+                color: $color !important;
+            }
+            tbody tr:last-of-type {
+                border-bottom: 2px solid $color;
+            }
+        }
+    }
+
+}

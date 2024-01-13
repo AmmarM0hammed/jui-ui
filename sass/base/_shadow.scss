@@ -1,0 +1,32 @@
+@function button-shadow($color){
+    @return 0 10px 20px -10px rgba($color, 0.66);
+}
+@function button-shadow-hover($color){
+    @return 0px 7px 14px 2px rgba($color, 0.40);
+}
+@function input-shadow(){
+    @return 0px 9px 11px 0px rgba(219, 219, 219, 0.66);
+}
+@function checkbox-shadow-hover($color){
+    @return 0px 3px 19px 1px rgba($color, 0.35);
+}
+@function badge-shadow($color){
+    @return 0px 6px 13px -1px rgba($color, 0.40);
+}
+@function badge-shadow-hover($color){
+    @return 0px 6px 13px -1px rgba($color, 0.70);
+}
+
+@function avatar-shadow($color){
+    @return 0px 0px 13px -1px rgba($color, 0.40);
+}
+@function avatar-shadow-hover($color){
+    @return 0px 6px 13px -1px rgba($color, 0.50);
+}
+
+@function default-shadow(){
+    @return  rgba(104, 104, 104, 0.1) 5px 5px 30px;
+}
+@function default-shadow-hover(){
+    @return rgba(104, 104, 104, 0.5) 5px 5px 15px;
+}

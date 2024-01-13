@@ -1,0 +1,9 @@
+@use "../../base/base" as *;
+@import "./base-tooltip";
+@import "./tooltip-colors";
+@import "./tooltip-dircation";
+
+
+@include base-tooltip();
+@include tooltip-colors();
+@include tooltip-dircation();

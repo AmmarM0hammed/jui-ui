@@ -1,0 +1,15 @@
+@use "../../base/base" as *;
+@import "./base-pagination";
+@import "./pagination-colors";
+@import "./pagination-animation";
+@import "./pagination-sizes";
+@import "../../helpers/disabled";
+
+
+@include base-pagination();
+@include pagination-colors();
+@include pagination-animation();
+@include pagination-sizes();
+
+
+

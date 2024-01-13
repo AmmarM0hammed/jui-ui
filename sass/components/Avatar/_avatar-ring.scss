@@ -1,0 +1,17 @@
+
+
+@mixin avatar-ring(){
+    .avatar-ring img{
+        border: 2px solid $color-default;
+        padding: 1.5px;
+        background-color: white;
+    }
+    @each $name,$color in $array-colors{
+        .avatar-ring-#{$name} img{
+           border: 2px solid $color;
+           padding: 1.5px;
+           background-color: white;
+          
+       }
+   }
+}

@@ -1,0 +1,23 @@
+
+//  width: 200px;
+// height: 35px;
+
+$array-input-sizes:(
+  "sm":("w":150px,"h":30px),
+  "md":("w":200px,"h":35px),
+  "lg":("w":250px,"h":40px),
+  "xl":("w":300px,"h":45px),
+);
+@mixin input-sizes(){
+    
+  @each $name,$value in $array-input-sizes{
+    .input-#{$name}{
+      width: map-get($value, "w" ) !important;
+      height: map-get($value, "h" ) !important;
+    }
+    .input-group {
+     display: flex !important;
+     align-items: center;
+    }
+  }
+}

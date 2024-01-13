@@ -1,0 +1,7 @@
+
+@import "../../helpers/form-input";
+
+@mixin base-input(){
+@include base-from("input");
+
+}

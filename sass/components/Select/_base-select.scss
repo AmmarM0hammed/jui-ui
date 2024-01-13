@@ -1,0 +1,54 @@
+@import "../../helpers/form-input";
+
+
+@mixin base-select(){
+    // .select{
+    //     background-color: $color-background-input;
+    //     color: $color-input;
+     
+    //     border: none;
+    //     border-radius: $border-radius - 2px;
+    //     width: 200px;
+    //     height: 35px;
+    //     padding-inline: 15px;
+    //     font-size: 14px;
+    //     transition: $transition-time;
+    //     border-bottom: 2px solid transparent;
+    //     &::placeholder{
+    //         color: $color-placeholder-input;
+    //         transition: $transition-time;
+    //     }
+    //     &:focus{
+    //         outline: none;
+    //         box-shadow: default-shadow();
+    //     }
+       
+
+
+        
+    //     &.select-circal{
+    //         border-radius: 500px
+    //     }
+    //    &.select-disabled{
+    //         @include disabled();
+    //     }
+    //     &.select-animation{
+    //         &:hover{
+    //             transform: translateY($base-transform);
+    //             box-shadow: input-shadow();
+                
+    //         }
+    //         &:focus{
+    //             transform: translateY($base-transform);
+    //             box-shadow: input-shadow();
+    //         }
+    //     }
+    
+    //    &.select-block{
+    //     width: 100%;
+    //    }
+    // }
+
+    @include base-from('select');
+
+}

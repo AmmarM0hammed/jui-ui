@@ -1,0 +1,51 @@
+
+
+@mixin button-color{
+    .btn-flat{
+        background-color: rgba($color-default,0.5);
+        color: $color-default;
+    }
+    .btn-ghost{
+        background-color: transparent;
+        color: $color-default;
+    }
+    @each $name,$colors in $array-colors{
+        .btn-#{$name}{
+            background: $colors;
+           
+            transition: $transition-time;
+            // font-size: 13px;
+            user-select: none;
+            &.btn-shadow{
+                box-shadow: button-shadow($colors);
+                &:hover{
+                    box-shadow: button-shadow-hover($colors);
+                }
+                &:active{
+                    box-shadow: button-shadow($colors);
+                }
+            }
+
+     } 
+        .btn-loading-#{$name}{
+            @include btn-loading($colors);
+        }
+
+        .btn-flat-#{$name}{
+            background-color: rgba($colors,0.2);
+            color: $colors;
+            font-weight: bold;
+        }
+        .btn-ghost-#{$name}{
+            background-color: transparent;
+            color: $colors;       
+            font-weight: bold;
+            // &:hover{
+            //     box-shadow: -5px 0px 15px -1px rgba($colors,0.1);
+            // }
+         }
+        
+    }
+
+   
+}

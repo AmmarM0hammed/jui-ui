@@ -1,0 +1,16 @@
+
+@mixin button-icon{
+    .btn-icon{
+        padding: 7px 8px !important;  
+        border-radius: $border-radius - 4px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    
+        *{
+            font-size: 18px; 
+        }
+    }
+   
+}
+

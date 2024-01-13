@@ -1,0 +1,8 @@
+@use "../../base/base" as *;
+@import "./base-table";
+@import "./table-color";
+
+
+
+@include base-table();
+@include table-color();

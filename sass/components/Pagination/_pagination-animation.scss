@@ -1,0 +1,14 @@
+
+
+@mixin pagination-animation(){
+    .pagination-animation ul li{
+        &:hover{
+          transform: translateY($base-transform);
+        }
+        &:active{
+            transform: translateY(0);
+
+        
+        }
+    }
+}

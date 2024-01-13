@@ -1,0 +1,60 @@
+
+
+@mixin base-alert($icon-color:transparent){
+    position: relative;
+    width: 95%;
+    margin-inline-end: 10px;
+    height: fit-content;
+    min-height: 50px;
+    box-shadow: input-shadow();
+    border-radius: $border-radius + 2px;
+    padding: 10px;
+    padding-inline:20px;
+    transition: $transition-time;
+    cursor: pointer;
+    border-left: 2px solid transparent;
+    display: flex;
+    // align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    &:hover{
+        transform: translateY($base-transform - 1px);
+    }
+    .header{
+        font-size: 20px;
+        font-weight: 600;
+        opacity: .8;
+        padding-block: 8px;
+    }
+    .body{
+        font-size: 14px;
+        opacity: .8;
+        padding-bottom: 13px;
+        
+    }
+    &:has(.alert-icon){
+        padding-left: 50px;
+    }
+    .alert-icon{
+        position: absolute;
+        left: 18px;
+        font-size: 20px;
+        color: $icon-color;
+    }
+  
+    .action{
+        padding-top: 5px;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+    .close{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 25px;
+        opacity: .5;
+    }
+
+    
+}

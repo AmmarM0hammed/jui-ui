@@ -1,0 +1,23 @@
+@use "../../base/base" as *;
+@import "./base_alert";
+
+.alert{
+    @include base-alert();
+}
+@each $name,$color in $array-colors{   
+    .alert-#{$name}{
+        @include base-alert($color);
+        border-left:5px solid $color ;
+    }
+}
+@each $name,$color in $array-colors{   
+    .alert-#{$name}-hover{
+        @include base-alert($color);
+
+        border-left:5px solid transparent ;
+
+        &:hover{
+            border-left:5px solid $color ;
+        }
+    }
+}

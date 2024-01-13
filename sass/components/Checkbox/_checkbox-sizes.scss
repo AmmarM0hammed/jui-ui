@@ -1,0 +1,27 @@
+
+
+
+$checkbox-sizes:(
+    "sm":25px,
+    "md":30px,
+    "lg":40px,
+    "xl":45px,
+);
+@mixin checkbox-sizes(){
+
+    @each $name,$size in $checkbox-sizes{
+        .checkbox-#{$name} input[type="checkbox"]{
+            max-width: $size;
+            max-height: $size;
+            width: $size;
+            height: $size;
+            
+            // &:checked::after{
+            //     width: calc($size - 85%); //5
+            //     height:calc($size - 50%); //5
+             
+            //     }
+        }
+    }
+
+}

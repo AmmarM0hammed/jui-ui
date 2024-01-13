@@ -1,0 +1,30 @@
+
+
+
+
+
+$radio-sizes:(
+    "sm":15px,
+    "md":20px,
+    "lg":25px,
+    "xl":35px,
+);
+@mixin radio-sizes(){
+
+    @each $name,$size in $radio-sizes{
+        .radio-#{$name} input[type="radio"]{
+            max-width: $size;
+            max-height: $size;
+            width: $size;
+            height: $size;
+           
+            
+            // &:checked::after{
+            //     width: calc($size - 85%); //5
+            //     height:calc($size - 50%); //5
+             
+            //     }
+        }
+    }
+
+}

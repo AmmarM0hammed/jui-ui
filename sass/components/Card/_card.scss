@@ -1,0 +1,9 @@
+@use "../../base/base" as *;
+@import "./base-card";
+@import "./card-type-1";
+@import "./card-type-2";
+
+
+@include base-card();
+@include card-type-1();
+@include card-type-2();

@@ -1,0 +1,18 @@
+
+
+
+$pagination-sizes:(
+    "sm":30px,
+    "md":35px,
+    "lg":40px,
+    "xl":50px,
+);
+@mixin pagination-sizes(){
+    @each $name,$sizes in $pagination-sizes{
+        .pagination-#{$name} ul li a{
+           width: $sizes;
+           height: $sizes;
+        //    font-size: calc($sizes - 23px );
+        }
+    }
+}

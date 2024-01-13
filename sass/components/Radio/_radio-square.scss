@@ -1,0 +1,11 @@
+
+
+@mixin radio-square(){
+    .radio-square input[type="radio"]{
+        &::after {
+            border-radius: 5px;
+
+        }
+        border-radius: 5px;
+    }
+}

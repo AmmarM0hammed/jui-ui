@@ -1,0 +1,21 @@
+@use "../../base/base" as * ;
+@import "./base-radio";
+@import "./radio-sizes";
+@import "../../helpers/disabled";
+
+@import "./radio-square";
+.radio{
+    @include base-radio();
+
+    &.radio-disabled{
+        @include disabled();
+    }
+}
+
+@each $name,$color in $array-colors{
+    .radio-#{$name}{
+        @include base-radio($color);
+    }
+}
+@include radio-sizes();
+@include radio-square();

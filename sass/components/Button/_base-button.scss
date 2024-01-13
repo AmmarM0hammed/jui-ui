@@ -1,0 +1,58 @@
+@import "../../helpers/disabled";
+
+@mixin base-button(){
+    .btn{
+        cursor: pointer;
+        padding: $padding-button;
+        background-color:$color-default;
+        width: fit-content;
+        text-align: center;
+        font-size: 13px;
+        border-radius: $border-radius;
+        color: white;
+        font-weight: 500;
+        transition: $transition-time;
+        border: none;
+        outline: none;
+        &.btn-shadow{
+            box-shadow: default-shadow();
+            &:hover{
+                box-shadow: default-shadow-hover();
+            }
+            &:active{
+                box-shadow:default-shadow();
+            }
+        }
+        &:active{
+            transform: scale(96%);
+        }
+        user-select: none;
+        &.btn-circal{
+            border-radius: 50px;
+        }
+        &.btn-sequre{
+            border-radius: 5px;
+        }
+        &.btn-animation{
+            &:hover{
+            transform: translateY($base-transform);
+            }
+            &:active{
+                transform: translateY(0px);
+            }
+        }
+        &.btn-block{
+            width: 100% !important;
+        }
+        // * Toggle Animation Button
+        &.btn-disabled{
+           @include disabled();
+        }
+        
+        &.btn-white{
+            background-color: white;
+            color: $color-default;
+        }
+    }
+  
+}

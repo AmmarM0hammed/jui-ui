@@ -1,0 +1,20 @@
+
+//  width: 200px;
+// height: 35px;
+
+$array-select-sizes:(
+  "sm":("w":150px,"h":30px),
+  "md":("w":200px,"h":35px),
+  "lg":("w":250px,"h":40px),
+  "xl":("w":300px,"h":45px),
+);
+@mixin select-sizes(){
+    
+  @each $name,$value in $array-select-sizes{
+    .select-#{$name}{
+      width: map-get($value, "w" ) !important;
+      height: map-get($value, "h" ) !important;
+    }
+   
+  }
+}

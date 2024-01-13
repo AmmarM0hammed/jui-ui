@@ -1,0 +1,28 @@
+@use "../../base/base" as *;
+@import "./base-navbar";
+@import "./navbar-color";
+@import "./navbar-dropdown";
+
+
+
+@mixin active(){
+    position: relative;
+    font-weight: 600;
+    opacity: 1;
+    &::before{
+        position: absolute;
+        content: "";
+        width: 4.5px;
+        height: 4.5px;
+        border-radius: 100px;
+        background-color: $color-default;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -4px;
+        font-weight: 800px;
+    }
+}
+
+@include base-navbar();
+@include navbar-colors();
+@include navbar-dropdown();

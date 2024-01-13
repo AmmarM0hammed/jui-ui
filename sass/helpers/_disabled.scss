@@ -1,0 +1,13 @@
+@mixin disabled(){
+    &:hover{
+        transform: translateY(0px);
+        box-shadow: none;
+    }
+    &:active{
+        transform: translateY(0px);
+        box-shadow: none;
+    }
+    cursor: default;
+    opacity: 0.5;
+    filter: brightness(90%);
+}

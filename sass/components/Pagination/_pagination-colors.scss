@@ -1,0 +1,27 @@
+
+@mixin pagination-colors(){
+    @each $name,$color in $array-colors{
+        .pagination-#{$name}{
+            ul li a.active{
+                background-color: $color;
+            }
+        }
+
+        .pagination-shadow-#{$name}{
+            ul li a.active{
+                box-shadow: button-shadow($color);
+                &:hover{
+                    box-shadow: button-shadow-hover($color);
+                }
+            }
+        }
+    }
+    .pagination-shadow{
+        ul li a.active{
+            box-shadow: default-shadow();
+            &:hover{
+                box-shadow: default-shadow-hover();
+            }
+        }
+    }
+}

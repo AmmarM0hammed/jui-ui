@@ -1,0 +1,14 @@
+@use "../../base/base" as *;
+@import "./base-badge";
+
+
+
+.badge{
+    @include base-badge();
+}
+
+@each $name,$color in $array-colors{
+    .badge-#{$name}{
+        @include base-badge($color);
+}
+}

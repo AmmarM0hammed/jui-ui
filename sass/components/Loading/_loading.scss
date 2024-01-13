@@ -1,0 +1,23 @@
+@use "../../base/base" as *;
+@import "./base_loading";
+
+
+.loading{
+    @include base-loading();
+}
+:has(body .loading) body{
+    overflow: hidden;
+}
+
+@each $name,$color in $array-colors{
+    .loading-#{$name}{
+        &::after{
+            border: 2px solid $color;
+            border-top: 2px solid transparent;
+        }
+    }
+    .loading-bg-#{$name}{
+        background-color: rgba($color, .6);
+
+    }
+}

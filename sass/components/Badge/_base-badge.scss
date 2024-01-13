@@ -1,0 +1,33 @@
+
+
+
+@mixin base-badge($color:$color-default){
+    width: fit-content;
+    height: fit-content;
+    background-color: $color;
+    padding-inline: 12px;
+    padding-block: 2px;
+    border-radius: $border-radius-badge;
+    color: white;
+    font-size: 12px;
+    box-shadow: badge-shadow($color);
+    position: relative; 
+    cursor: pointer;
+    user-select: none;
+    transition: $transition-time;
+    font-weight: 200;
+    &:hover{
+        box-shadow: badge-shadow-hover($color);
+        transform: translateY($base-transform);
+    }
+
+    &.badge-circal{
+        border-radius: 300px;
+    }
+    &.badge-dot{
+        border-radius: 300px;
+        padding: 1px;
+        padding-inline:4px ;
+    }
+
+}

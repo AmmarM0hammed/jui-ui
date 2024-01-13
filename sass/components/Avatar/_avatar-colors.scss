@@ -1,0 +1,9 @@
+
+@mixin avatar-colors(){
+    @each $name,$color in $array-colors{
+        .avatar-#{$name}{
+            @include base-avatar($color);
+
+        }
+    }
+}

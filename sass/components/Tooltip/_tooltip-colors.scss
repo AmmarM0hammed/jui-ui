@@ -1,0 +1,19 @@
+
+
+@mixin tooltip-colors(){
+    .tooltip-white .tooltip-text{
+        background-color: white;
+        color: invert($color: white); 
+        box-shadow: default-shadow();
+    }
+  
+    @each $name,$color in $array-colors{
+        .tooltip-#{$name} .tooltip-text{
+            background-color: $color !important; 
+        }
+        .tooltip-text-#{$name} .tooltip-text{
+            color: $color !important; 
+        }
+       
+    }
+}

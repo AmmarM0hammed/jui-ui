@@ -1,0 +1,79 @@
+@use "../../base/base" as *;
+
+
+@import "./base-textarea";
+@import "./textarea-border";
+@import "./textarea-color";
+
+@import "../../helpers/disabled";
+
+@include base-textarea();
+@include textarea-border();
+@include textarea-colors();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .input-placeholder{
+//     position: relative;
+//     width: fit-content;
+//     border-radius: $border-radius;
+//     height: fit-content;
+//     label{
+//         position: absolute;
+//         color: $color-placeholder-input;
+//         transition: $transition-time;
+//         left: 12px;
+//         top: 50%;
+//         transform: translateY(-50%);
+//         font-size: 12px;
+//     }
+//     input:focus ~ label{
+//         left: 8px;
+//         top: -10px;
+//         color: $color-input;
+//     }
+//     input:not(:placeholder-shown) ~ label{
+//         left: 8px;
+//         top: -10px;
+//         color: $color-input;
+//     }
+    
+// }
+
+
+// $input-group-diraction:"left","right";
+
+// @each $name,$color in $array-colors{
+//     .input-group-#{$name}-left{
+//         @include input-group($color,"left");
+
+//         &.input-block{
+//             width: max-content;
+//             input{width: 95vw;}
+//         }
+      
+//     }   
+//     .input-group-#{$name}-right{
+//         @include input-group($color,"right");
+        
+//         &.input-block{
+//             width: max-content;
+//             input{width: 95vw;}
+//         }
+      
+      
+//     }
+// }

@@ -1,0 +1,54 @@
+@import "../../helpers/form-input";
+
+
+@mixin base-textarea(){
+//     textarea{
+//     &.textarea{
+//         background-color: $color-background-input;
+//         color: $color-input;
+//         border: none;
+//         border-radius: $border-radius - 2px;
+//         padding-inline: 15px;
+//         font-size: 14px;
+//         transition: $transition-time;
+//         border-bottom: 2px solid transparent;
+//         &::placeholder{
+//             color: $color-placeholder-input;
+//             transition: $transition-time;
+//         }
+
+//         padding-top: 10px;
+//         &.textarea-circal{
+//             border-radius: $border-radius + 10px;
+//         }
+//        &.textarea-disabled{
+//             @include disabled();
+//         }
+//         &.textarea-animation{
+//             &:hover{
+//                 transform: translateY($base-transform);
+//                 box-shadow: input-shadow();
+                
+//             }
+//             &:focus{
+//                 transform: translateY($base-transform);
+//                 box-shadow: input-shadow();
+//             }
+//         }
+
+//        &.textarea-block{
+//         width: 100%;
+//        }
+      
+//     }
+// } 
+
+@include base-from('textarea');
+
+.textarea{
+    padding-top: 10px;
+    padding-inline: 15px;
+    width: auto;
+    height: auto;
+}
+}

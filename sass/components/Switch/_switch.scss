@@ -1,0 +1,14 @@
+@use "../../base/base" as *;
+@import "./base-switch";
+
+.switch{
+    @include base-switch();
+}
+
+@each $name,$color in $array-colors{
+    
+.switch-#{$name}{
+    @include base-switch($color);
+}
+
+}
